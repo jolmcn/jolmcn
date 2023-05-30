@@ -33,6 +33,11 @@ html{
   text-align:left;
   width:80vw;
   justify-content:center;
+  opacity:0.6;
+}
+
+.App-footer:hover{
+  opacity:1;
 }
 
 .App-footer .footerText{

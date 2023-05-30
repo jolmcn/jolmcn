@@ -47,7 +47,7 @@ function App() {
         <img src={click} className="clickImg" alt="clickImg" />
         </a>
       </header>
-      <footer className="App-footer"><p className="footerText"><span className="emphasis">jolmcn</span> at <span className="emphasis">gmail</span> dot <span className="emphasis">com</span></p></footer>
+      <footer className="App-footer">Jack OLeary McNeice <br /> <p className="footerText"><span className="emphasis">jolmcn</span> at <span className="emphasis">gmail</span> dot <span className="emphasis">com</span></p></footer>
     </div>
   );
 }

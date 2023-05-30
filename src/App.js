@@ -1,23 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import click from './click.svg';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+
+  const textList = [
+    "Under construction.",
+    "Clicking that does nothing, sorry!",
+    "Still nothing...",
+    "Maybe try again?",
+    "Sorry, that was mean.",
+    "It was a joke.",
+    "Really though, no need to click.",
+    "It's a loop.",
+    "Maybe I was unclear, that's my fault!"
+  ];
+
+  const [text, setText] = useState(textList[0]);
+  const [textNumber, setTextNumber] = useState(0);
+  
+  const updateText = (index) => {
+    if(index>textList.length-2){
+      setTextNumber(0);
+      console.log("true");
+    }else{
+      setTextNumber(textNumber+1);
+      console.log("false");
+    }
+    console.log(textNumber);
+    setText(textList[textNumber]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {text}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a 
+          className="click"
+          onClick={() => {
+            updateText(textNumber);
+          }}
         >
-          Learn React
+        
+        <img src={click} className="clickImg" alt="clickImg" />
         </a>
       </header>
+      <footer className="App-footer"><p className="footerText"><span className="emphasis">jolmcn</span> at <span className="emphasis">gmail</span> dot <span className="emphasis">com</span></p></footer>
     </div>
   );
 }

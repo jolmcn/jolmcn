@@ -37,7 +37,7 @@ function App() {
         <p>
           {text}
         </p>
-        <a 
+        <button 
           className="click"
           onClick={() => {
             updateText(textNumber);
@@ -45,7 +45,7 @@ function App() {
         >
         
         <img src={click} className="clickImg" alt="clickImg" />
-        </a>
+        </button>
       </header>
       <footer className="App-footer">Jack OLeary McNeice <br /> <p className="footerText"><span className="emphasis">jolmcn</span> at <span className="emphasis">gmail</span> dot <span className="emphasis">com</span></p></footer>
     </div>

@@ -12,7 +12,7 @@ const Project = () => {
   if(loading) return <p>Loading...</p>
   if(error) return <p>Error</p>
   // if(data) return <p>{data.data.data.attributes.Title}</p>
-  const thumbnailAddress = "http://127.0.0.0:1337" + data.attributes.thumbnail.data.attributes.url;
+  const thumbnailAddress = "https://strapi-production-07a4.up.railway.app:" + data.attributes.thumbnail.data.attributes.url;
   return ( 
     <>
       <Navigation />
@@ -22,11 +22,11 @@ const Project = () => {
         </div>
         <div className="projectHero" style={{backgroundImage: `url(${thumbnailAddress})`}}></div>
         <div className="projectSubContent">
-          <h2 className="projectDetails"><span className="projectCompany">{data.attributes.Company}</span>  <span className="projectDate">{data.attributes.Date.substring(0,4)}</span></h2>
-          <h1 className="projectTitle">{data.attributes.Title}</h1>
+          <h2 className="projectDetails"><span className="projectCompany">{data.attributes.ProjectCompany}</span>  <span className="projectDate">{data.attributes.Date.substring(0,4)}</span></h2>
+          <h1 className="projectTitle">{data.attributes.ProjectTitle}</h1>
           {/* <h3 className="projectDate">—{data.attributes.Date.substring(0,4)}</h3> */}
           <Markdown className="projectContent">
-            {data.attributes.Content}
+            {data.attributes.ProjectContent}
           </Markdown>
         </div>
       </div>

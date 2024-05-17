@@ -27,12 +27,12 @@ const Projects = () => {
               <li key={project.id}>
                 <Link to={`/projects/${project.id}`} activeClassName="active">
                   <div className="projectLeft">
-                    <div className="projectTitle">{project.attributes.Title}</div>
-                    <div className="projectDate">{project.attributes.Date.substring(0,4)}</div>
-                    <div className="projectBrief">{project.attributes.summary.substring(0,100)+'...'}</div>
+                    <div className="projectTitle">{project.attributes.ProjectTitle}</div>
+                    <div className="projectDate">{project.attributes.ProjectDate.substring(0,4)}</div>
+                    <div className="projectBrief">{project.attributes.ProjectContent.substring(0,100)+'...'}</div>
                     <div className="projectLink"></div>
                   </div>
-                  <span className="projectImage" style={{backgroundImage:`url(http://localhost:1337${project.attributes.thumbnail.data.attributes.formats.medium.url}  )`}}></span>
+                  <span className="projectImage" style={{backgroundImage:`url(https://strapi-production-07a4.up.railway.app:${project.attributes.thumbnail.data.attributes.formats.medium.url}  )`}}></span>
                 </Link>
               </li>
             ))}

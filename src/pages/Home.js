@@ -1,4 +1,3 @@
-import click from './click.svg';
 import React, { useState } from 'react';
 
 function Home() {

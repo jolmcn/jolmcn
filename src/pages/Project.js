@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
 const Project = () => {

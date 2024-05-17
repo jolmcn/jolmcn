@@ -12,7 +12,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/projects?populate=*")
+      .get("https://strapi-production-07a4.up.railway.app:/api/projects?populate=*")
       .then(({ data }) => setProjects(data.data))
       .catch((error) => setError(error));
   }, []);

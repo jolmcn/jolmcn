@@ -7,12 +7,12 @@ import useFetch from "../hooks/useFetch";
 
 const Project = () => {
   const { id } = useParams();
-  const {loading, error, data} = useFetch("http://localhost:1337/api/projects/" + id + "?populate=*");
+  const {loading, error, data} = useFetch("https://strapi-production-07a4.up.railway.app://api/projects/" + id + "?populate=*");
   
   if(loading) return <p>Loading...</p>
   if(error) return <p>Error</p>
   // if(data) return <p>{data.data.data.attributes.Title}</p>
-  const thumbnailAddress = "http://localhost:1337" + data.attributes.thumbnail.data.attributes.url;
+  const thumbnailAddress = "http://127.0.0.0:1337" + data.attributes.thumbnail.data.attributes.url;
   return ( 
     <>
       <Navigation />

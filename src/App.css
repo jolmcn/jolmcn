@@ -1,17 +1,118 @@
-html{
-  overflow:hidden;
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+  font-family: 'Monaco';
+  font-style:normal;
+  font-weight:normal;
+  src: local('Monaco'),url('./fonts/Monaco.woff') format('woff');
 }
 
+
+/* SHARED */
+
+
+html{
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
+}
+
+body{
+  padding:10px 30px;
+  color:#000;
+  background-color:#fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color:#000;
+    color:#fff;
+  }
+}
+
+a:hover{
+  color:blue;
+}
+
+.emphasis{
+  font-weight:bold;
+}
+
+/* Navigation */
+
+
+.topNav{
+  padding:30px 0 60px 0;
+}
+
+.footerNav{
+  padding:80px 0;
+}
+.topNav ul{
+  display:flex;
+  list-style-type:none;
+}
+
+.footerNav ul{
+  display:flex;
+  list-style-type:none;
+}
+
+.topNav ul li{
+  padding:0 10px 0 0;
+}
+
+.footerNav ul li{
+  padding:0 10px 0 0;
+}
+
+.topNav ul li a{
+  font-weight:bold;
+  font-size:20px;
+  padding-bottom:5px;
+}
+
+.footerNav ul li a{
+  font-weight:bold;
+  padding-bottom:5px;
+  font-size:20px;
+}
+
+header{
+  /* font-size:60px; */
+  font-size:calc(40px + 2vmin);
+  font-weight:bold;
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
+  text-transform:uppercase;
+}
+
+.topNav a.active{
+  border-bottom:5px solid;
+}
+
+.footerNav a.active{
+  border-bottom:5px solid;
+}
+
+.topNav a:hover{
+  border-bottom:5px solid #0000ff;
+  color:#0000ff;
+}
+
+.footerNav a:hover{
+  border-bottom:5px solid #0000ff;
+  color:#0000ff;
+}
+
+/* HOME */
 
 .App {
   display:flex;
   flex-direction:column;
   max-height:100vh;
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
 }
 
 .App-header {
-  background-color: #fff;
-  /* min-height: 100vh; */
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
   height:80vh;
   display: flex;
   margin:auto;
@@ -20,9 +121,7 @@ html{
   align-items: left;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  font-weight:bold;
   font-family:Helvetica, Arial, sans-serif;
-  color: #000;
 }
 
 .App-footer{
@@ -33,34 +132,347 @@ html{
   text-align:left;
   width:80vw;
   justify-content:center;
-  opacity:0.6;
-}
-
-.App-footer:hover{
-  opacity:1;
 }
 
 .App-footer .footerText{
   justify-content:center;
   text-align:left;
   font-size:calc(10px + 1vmin);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
   font-weight:lighter;
 }
 
 .click{
   display:flex;
   width:100px;
+  height:10px;
+  background:#000;
   cursor:pointer;
-  background:none;
   border:none;
   padding:0;
+  margin-top:10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .click{
+    background:#fff;
+  }
 }
 
 .clickImg{
   width:100%;
 }
 
-.emphasis{
-  font-weight:bold;
+/* PROJECTS */
+
+.projectList{
+  display:block;
+  margin:auto;
+  width:100%;
 }
+
+.projectList ul{
+  list-style-type:none;
+  padding:0;
+}
+
+.projectList li{
+  margin:auto;
+  width:100%;
+  height:60vh;
+  margin:0 0 50px 0;
+}
+
+.projectList li a{
+  /* display:grid;
+  grid-template-columns: 28% 68%;
+  grid-gap:4%; */
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+}
+
+.projectList .projectImage{
+  display:block;
+  width:65%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+}
+
+.projectList .projectTitle{
+  place-items:center;
+  font-weight:bold;
+  font-size:calc(10px + 1vmin);
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.projectList .projectBrief{
+}
+
+.projectList .projectDate{
+  font-size: calc(3px + 1vmin);
+  font-family:Monaco, 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  padding-bottom:10px;
+}
+
+
+.projectLink{
+  width:30px;
+  height:30px;
+  background:cover;
+  background-position:center;
+  background-size:cover;
+  background-image:url(./arrow.png);
+  background-repeat:no-repeat;
+  place-items:center;
+}
+
+
+.projectLeft{
+  border-top:solid 1px #000;
+  width:34%;
+}
+
+.projectList li a:hover .projectLeft{
+  border-top:solid 1px blue;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .projectLeft{
+    border-top:solid 1px #fff;
+  }
+
+  .projectLeft:hover{
+    border-color:blue;
+    color:blue;
+  }
+
+  .projectLink{
+    background-image:url(./arrow_white.png);
+  }
+}
+
+.projectList li a:hover .projectLink{
+  background-image:url(./arrow_blue.png);
+}
+
+/* PROJECT */
+
+.projectContainer{
+  display:block;
+  margin:auto;
+  width:100%;
+  padding-top:20px;
+}
+
+.projectHero{
+  display:block;
+  margin:auto;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  height:60vh;
+}
+
+.projectContainer .projectSubContent{
+  width:100%;
+  display:block;
+  margin:auto;
+  margin-top:50px;
+  border-top:solid 1px #000;
+}
+
+@media (prefers-color-scheme: dark){
+  .projectContainer .projectSubContent{
+    border-top:solid 1px #fff;
+  }
+}
+
+.projectContainer .projectContent{
+  font-size:calc(10px + 1vmin);
+}
+
+.projectContainer .projectSubContent .projectTitle{
+  font-size: calc(30px + 2vmin);
+  font-weight:bold;
+  text-transform: uppercase;
+  line-height: 80%;
+  padding:0 0 3% 0;
+}
+
+.projectContainer .projectSubContent .projectDetails{
+  font-size: calc(1px + 1vmax);
+  font-family:Monaco, 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  padding-top:5px;
+  padding-bottom:15px;
+}
+
+.projectContainer .projectSubContent .projectDate{
+  text-align:right;
+}
+
+.projectContainer .projectSubContent .projectCompany{
+  text-align:left;
+}
+
+.projectContainer .projectContent{
+  text-align:justify;
+}
+
+.backToProjects{
+  width:50px;
+  height:30px;
+  padding-bottom:50px;
+  display:block;
+  background-position:center;
+  background-size:cover;
+  background-image:url(./back.png);
+  background-repeat:no-repeat;
+  place-items:center;
+}
+
+.backToProjects:hover{
+  background-image:url(./back_blue.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  .backToProjects{
+    background-image:url(./back_white.png);
+  }
+}
+
+
+/* CONTACT */
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 991px) {
+  /* body {background: pink;} */
+
+
+.projectList{
+  display:block;
+  margin:auto;
+  width:100%;
+}
+
+.projectList ul{
+  list-style-type:none;
+  padding:0;
+  display:flex;
+  flex-direction: column;
+  grid-gap:4%;
+}
+
+.projectList li{
+  margin:auto;
+  width:100%;
+  height:50vh;
+  margin-bottom:50px;
+}
+
+.projectList li a{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+}
+
+.projectList .projectImage{
+  display:block;
+  height:90%;
+  background-size:cover;
+  background-position:center;
+  width:100%;
+}
+
+.projectList .projectTitle{
+  place-items:center;
+  font-weight:bold;
+  font-size:calc(10px + 1vmin);
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.projectList .projectBrief{
+  display:none;
+}
+
+.projectList .projectDate{
+  font-size: calc(3px + 1vmin);
+  font-family:Monaco, 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  padding-bottom:10px;
+}
+
+
+.projectLink{
+  width:30px;
+  height:30px;
+  background:cover;
+  background-position:center;
+  background-size:cover;
+  background-image:url(./arrow.png);
+  background-repeat:no-repeat;
+  place-items:center;
+  display:none;
+}
+
+
+.projectLeft{
+  border-top:none;
+  height:15%;
+  width:100%;
+}
+
+.projectList li a:hover .projectLeft{
+  border-top:none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .projectLeft{
+    border-top:none;
+  }
+
+  .projectLeft:hover{
+    border-color:blue;
+    color:blue;
+  }
+
+  .projectLink{
+    background-image:url(./arrow_white.png);
+  }
+}
+
+.projectList li a:hover .projectLink{
+  background-image:url(./arrow_blue.png);
+}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* body {background: orange;} */
+} 
+

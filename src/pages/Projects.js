@@ -12,7 +12,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("https://strapi-production-07a4.up.railway.app:/api/projects?populate=*")
+      .get("https://strapi-production-07a4.up.railway.app/api/projects?populate=*")
       .then(({ data }) => setProjects(data.data))
       .catch((error) => setError(error));
   }, []);
@@ -32,7 +32,7 @@ const Projects = () => {
                     <div className="projectBrief">{project.attributes.ProjectContent.substring(0,100)+'...'}</div>
                     <div className="projectLink"></div>
                   </div>
-                  <span className="projectImage" style={{backgroundImage:`url(https://strapi-production-07a4.up.railway.app:${project.attributes.thumbnail.data.attributes.formats.medium.url}  )`}}></span>
+                  <span className="projectImage" style={{backgroundImage:`url(${project.attributes.ProjectThumb.data.attributes.formats.medium.url}  )`}}></span>
                 </Link>
               </li>
             ))}

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Home() {
 
   const textList = [
-    "Under construction.",
+    "Hello.",
     "Clicking that does nothing, sorry!",
     "Still nothing...",
     "Maybe try again?",

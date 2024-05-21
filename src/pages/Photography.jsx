@@ -5,7 +5,6 @@ const Photography = () => {
   return ( 
       <>
         <Navigation />
-        <h1>Photography</h1>
         
         <Footer />
       </>

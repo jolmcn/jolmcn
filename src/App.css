@@ -429,7 +429,7 @@ header{
 }
 
 .projectList .projectDate{
-  font-size: calc(3px + 1vmin);
+  font-size: calc(5px + 2vmin);
   font-family:Monaco, 'Courier New', Courier, monospace;
   text-transform: uppercase;
   padding-bottom:10px;

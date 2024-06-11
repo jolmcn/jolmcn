@@ -16,7 +16,6 @@ html{
 }
 
 body{
-  padding:10px 30px;
   color:#000;
   background-color:#fff;
 }
@@ -24,6 +23,22 @@ body{
 a{
   color:#000;
   text-decoration:none;
+}
+
+.loadingContainer{
+  display:grid;
+  place-items:center;
+  width:100vw;
+  height:100vh;
+  position:abosolute;
+  left:0;
+  top:0;
+}
+
+.loadingBox{
+  width:20px;
+  height:20px;
+  background-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,6 +50,13 @@ a{
   a{
     color:white;
   }
+
+
+  .loadingBox{
+    width:20px;
+    height:20px;
+    background-color: #fff;
+  }
 }
 
 a:hover{
@@ -45,15 +67,23 @@ a:hover{
   font-weight:bold;
 }
 
+.pageContainer{
+  padding:0 30px;
+}
+
 /* Navigation */
 
+
+.mainNav{
+  padding:10px 30px;
+}
 
 .topNav{
   padding:30px 0 60px 0;
 }
 
 .footerNav{
-  padding:80px 0;
+  padding:80px 30px;
 }
 .topNav ul{
   display:flex;

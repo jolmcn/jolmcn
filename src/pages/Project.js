@@ -3,12 +3,12 @@ import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import { NavLink } from "react-router-dom";
-// import useFetch from "../hooks/useFetch";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loading from "../components/Loading";
+import { motion, AnimatePresence } from "framer-motion";
 const Project = () => {
   const { id } = useParams();
-  // const {loading, error, data} = useFetch("https://strapi-production-07a4.up.railway.app://api/projects/" + id + "?populate=*");
   
   const [project, setProject] = useState([]);
   const [error, setError] = useState(null);
@@ -23,7 +23,7 @@ const Project = () => {
   });
 
 
-  if(loading) return <p>Loading...</p>
+  if(loading) return <Loading />
   if(error) return <p>Error</p>
 
 
@@ -32,21 +32,26 @@ const Project = () => {
   return ( 
     <>
       <Navigation />
-      <div className="projectContainer">
-        <div className="projectNav">
-          <NavLink to="/projects" className="backToProjects"></NavLink>
-        </div>
-        <div className="projectHero" style={{backgroundImage: `url(${thumbnailAddress})`}}></div>
-        <div className="projectSubContent">
-          <h2 className="projectDetails">
-            <span className="projectCompany">{project.attributes.ProjectCompany}</span>  
-            <span className="projectDate">{project.attributes.ProjectDate.substring(0,4)}</span>
-          </h2>
-          <h1 className="projectTitle">{project.attributes.ProjectTitle}</h1>
-          {/* <h3 className="projectDate">—{data.attributes.ProjectDate.substring(0,4)}</h3> */}
-          <Markdown className="projectContent">
-            {project.attributes.ProjectContent}
-          </Markdown>
+      <div className="pageContainer">
+        <div className="projectContainer">
+          <div className="projectNav">
+            <NavLink to="/projects" className="backToProjects"></NavLink>
+          </div>
+          {loading?<p>Loading...</p>:
+          <><div className="projectHero" style={{backgroundImage: `url(${thumbnailAddress})`}}></div>
+          <div className="projectSubContent">
+            <h2 className="projectDetails">
+              <span className="projectCompany">{project.attributes.ProjectCompany}</span>  
+              <span className="projectDate">{project.attributes.ProjectDate.substring(0,4)}</span>
+            </h2>
+            <h1 className="projectTitle">{project.attributes.ProjectTitle}</h1>
+            {/* <h3 className="projectDate">—{data.attributes.ProjectDate.substring(0,4)}</h3> */}
+            <Markdown className="projectContent">
+              {project.attributes.ProjectContent}
+            </Markdown>
+          </div>
+          </>
+          }
         </div>
       </div>
       <Footer />

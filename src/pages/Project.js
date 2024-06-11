@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "../components/Loading";
-import { motion, AnimatePresence } from "framer-motion";
 const Project = () => {
   const { id } = useParams();
   

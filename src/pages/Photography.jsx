@@ -5,7 +5,8 @@ const Photography = () => {
   return ( 
       <>
         <Navigation />
-        
+        <div className="pageContainer">        
+        </div>
         <Footer />
       </>
     )

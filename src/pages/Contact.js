@@ -4,7 +4,9 @@ const Contact = () => {
     return ( 
       <>
         <Navigation />
-      <h1>Contact</h1>
+        <div className="pageContainer">
+          <h1>Contact</h1>
+          </div>
         <Footer />
       </>
     )

@@ -34,7 +34,7 @@ const Projects = () => {
                     <div className="projectLeft">
                       <div className="projectTitle">{project.attributes.ProjectTitle}</div>
                       <div className="projectDate">{project.attributes.ProjectDate.substring(0,4)}</div>
-                      <div className="projectBrief">{project.attributes.ProjectContent.substring(0,100)+'...'}</div>
+                      <div className="projectBrief">{project.attributes.ProjectAbstract}</div>
                       <div className="projectLink"></div>
                     </div>
                     <span className="projectImage" style={{backgroundImage:`url(${project.attributes.ProjectThumb.data.attributes.formats.medium.url}  )`}}></span>

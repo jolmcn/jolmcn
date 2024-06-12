@@ -27,7 +27,7 @@ const Project = () => {
 
 
   const thumbnailAddress = project.attributes.ProjectThumb.data.attributes.formats.large.url;
-  
+  console.log(project.attributes.ProjectAbstract)
   return ( 
     <>
       <Navigation />

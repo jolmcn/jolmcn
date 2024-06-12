@@ -75,7 +75,7 @@ a:hover{
   border-top:solid 1px #000;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body{
     background-color:#000;
     color:#fff;
@@ -99,7 +99,7 @@ a:hover{
   .topNav{
     border-bottom:solid 1px #fff;
   }
-}
+} */
 
 .topNav ul{
   display:flex;
@@ -208,11 +208,11 @@ header{
   margin-top:10px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .click{
     background:#fff;
   }
-}
+} */
 
 .clickImg{
   width:100%;
@@ -305,7 +305,7 @@ header{
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .projectLeft{
     border-top:solid 1px #fff;
   }
@@ -330,7 +330,7 @@ header{
   .projectLink{
     background-image:url(./arrow_white.png);
   }
-}
+} */
 
 .projectList li a:hover .projectLink{
   background-image:url(./arrow_blue.png);
@@ -370,6 +370,11 @@ header{
   margin-top:20px;
 }
 
+.projectContainer .projectSubContent h3{
+  font-weight:bold;
+  font-size:calc(12px + 1vmin);
+}
+
 .projectContainer .projectSubContent ul{
   list-style-type: circle;
   padding:10px 0 10px 20px;
@@ -384,11 +389,11 @@ header{
   margin-bottom:20px
 }
 
-@media (prefers-color-scheme: dark){
+/* @media (prefers-color-scheme: dark){
   .projectContainer .projectSubContent{
     border-top:solid 1px #fff;
   }
-}
+} */
 
 .projectContainer .projectContent{
   font-size:calc(10px + 1vmin);
@@ -441,11 +446,11 @@ header{
   background-image:url(./back_blue.png);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .backToProjects{
     background-image:url(./back_white.png);
   }
-}
+} */
 
 
 /* CONTACT */
@@ -558,7 +563,7 @@ header{
   }
 
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     .projectLeft{
       border-top:none;
     }
@@ -571,7 +576,7 @@ header{
     .projectLink{
       background-image:url(./arrow_white.png);
     }
-  }
+  } */
 
   .projectList li a:hover .projectLink{
     background-image:url(./arrow_blue.png);

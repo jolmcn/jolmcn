@@ -9,10 +9,10 @@ const Contact = () => {
               <ul>
                 <li>Phone: +353 87 947 7278</li>
                 <li>Email: jolmcn@gmail.com</li>
-                <li><a href="https://github.com/jolmcn" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/jack-o-leary-mcneice-b9a73139/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/jolmcn/" target="_blank">Instagram</a></li>
-                <li><a href="https://drive.google.com/file/d/1CVh0U3X7VjVMlswtsPOFpNnXWeZ1dgb1/view?usp=sharing" target="_blank">CV</a></li>
+                <li><a href="https://github.com/jolmcn" target="_blank" rel="noreferrer" >Github</a></li>
+                <li><a href="https://www.linkedin.com/in/jack-o-leary-mcneice-b9a73139/" target="_blank" rel="noreferrer" >LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/jolmcn/" target="_blank" rel="noreferrer" >Instagram</a></li>
+                <li><a href="https://drive.google.com/file/d/1CVh0U3X7VjVMlswtsPOFpNnXWeZ1dgb1/view?usp=sharing" target="_blank" rel="noreferrer" >CV</a></li>
               </ul>
             </p>
           </div>

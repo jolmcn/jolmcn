@@ -363,6 +363,27 @@ header{
   border-top:solid 1px #000;
 }
 
+.projectContainer .projectSubContent h2{
+  font-weight:bold;
+  font-size:calc(15px + 1vmin);
+  padding-bottom:15px;
+  margin-top:20px;
+}
+
+.projectContainer .projectSubContent ul{
+  list-style-type: circle;
+  padding:10px 0 10px 20px;
+  font-size:calc(10px + 1vmin);
+}
+
+.projectContainer .projectSubContent a{
+  text-decoration: underline;
+}
+
+.projectContainer .projectSubContent img{
+  margin-bottom:20px
+}
+
 @media (prefers-color-scheme: dark){
   .projectContainer .projectSubContent{
     border-top:solid 1px #fff;
